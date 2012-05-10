@@ -131,7 +131,7 @@ class Jbuilder < BlankSlate
   
   # Encodes the current builder as JSON.
   def target!
-    ActiveSupport::JSON.encode @attributes
+    Yajl::Encoder.encode @attributes
   end
 
 
